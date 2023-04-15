@@ -8,21 +8,37 @@ using namespace std;
 
 
 int main()
-{
+{	
+	int* number = new int[10];
+	number[0] = 12;
+
+	cout << sizeof(number) << endl<< sizeof(number[8]);
+
+	/*/
 	std::cout << "Hello World!\n\n\n";
 	char name[33];
 	name[10] = '0'; name[11] = '1';
 	char* cPtr = name;
 
-	cout << name << endl << endl<<endl<<&name << endl << sizeof(name);
-	cout << endl << sizeof(name) / sizeof(name[0]) << endl;
+	//cout << name << endl << endl<<endl<<&name << endl << sizeof(name);
+	//cout << endl << sizeof(name) / sizeof(name[0]) << endl;
 	string sName = "another one";
+
+	string sArray[20];
+	sArray[0] = "0 index";
+
+	sArray[1] = "hows it going"; sArray[2] = "No way";
+	cout << endl << (sArray[1]) << endl << endl << sArray;
+
+	cout << sArray[0].append( sArray[1]);
+
 	memset(name, 0, 12);
 
-	getline(cin, sName, '\n');
+	//getline(cin, sName, '\n');
 	//cin >> sName;
 	cout << "\n\n" << name << "\n\n\n\n";
 	cout << sName;
+	// */
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

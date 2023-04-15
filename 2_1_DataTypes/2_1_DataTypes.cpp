@@ -15,11 +15,18 @@ int main()
     cin >> numEmp;
 
     for (int iCount = 0; iCount < numEmp; iCount++) {
-        (workers + iCount)->Read();
+        workers[iCount].Read();
     }
     for (int iCount = 0; iCount < numEmp; iCount++) {
-        (workers + iCount)->Write();
+        workers[iCount].Write();
     }
+
+
+
+
+
+
+
 
     /*
     Employee* empPtr = new Employee();//HEAP

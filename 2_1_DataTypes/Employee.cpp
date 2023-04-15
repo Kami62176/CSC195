@@ -2,11 +2,16 @@
 #include <iostream>
 using namespace std;
 
-Employee::Employee() {
+Employee::Employee() { //constructer
     memset(&name, NULL, sizeof(name));
 
+}
+
+Employee::~Employee() { // destructor
+    memset(&name, NULL, sizeof(name));
 
 }
+
 
 const float Employee::TAX = 0.01f;
 
@@ -14,9 +19,9 @@ const float Employee::TAX = 0.01f;
 void Employee::Read() {
     cout << "\n Enter your name : ";
     cin >> name;
-    cout << "\n Enter days worked: ";
+    cout << " Enter days worked: ";
     cin >> daysWorked;
-    cout << "\n Enter your hourly wage: ";
+    cout << " Enter your hourly wage: ";
     cin >> wage;
 
     if (daysWorked > MAX_DAYS)
@@ -24,7 +29,7 @@ void Employee::Read() {
 
 
     for (int i = 0; i < daysWorked; i++) {
-        cout << "\n Enter the hours worked for day " << (i + 1) << ":";
+        cout << " Enter the hours worked for day " << (i + 1) << ":";
         cin >> hoursWorkedPerDay[i];
         grossPay = hoursWorkedPerDay[i] * wage + grossPay;
         //Calc running totals here
